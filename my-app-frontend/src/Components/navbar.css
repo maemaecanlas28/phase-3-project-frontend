@@ -7,6 +7,10 @@
     font-family: "Poppins", sans-serif;
 }
 
+a{
+    text-decoration: none;
+}
+
 li {
     list-style: none;
 }
@@ -24,7 +28,7 @@ li {
 .nav-links {
     display: flex;
     justify-content: flex-end;
-    width: 100%;
+    width: 75%;
 }
 
 .container {
