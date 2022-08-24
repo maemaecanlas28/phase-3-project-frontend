@@ -32,6 +32,7 @@ function AuthProvider ({ children }) {
   
     let signout = async () => {
         setUser(null);
+        localStorage.removeItem("user");
     };
   
     let value = { user, signin, signout };

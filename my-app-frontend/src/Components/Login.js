@@ -29,6 +29,10 @@ function Login() {
             .catch()
     }
 
+    function handleSignup () {
+        navigate("/signup")
+    }
+
     return (
         <div className="login-form">
             <Form onSubmit={handleSubmit} error={error.length == 0 ? "false" : "true"}>
@@ -44,7 +48,7 @@ function Login() {
                 <Form.Field>
                     <label>Password</label>
                     <input
-                        type="text"
+                        type="password"
                         name="Password"
                         placeholder='Password'
                         value={password}
@@ -56,6 +60,7 @@ function Login() {
                         header='Action Forbidden'
                         content={error}/>
                 ): null}
+                <Button onClick={handleSignup}>Sign-up</Button>
                 <Button type='submit'>Submit</Button>
             </Form>
         </div>

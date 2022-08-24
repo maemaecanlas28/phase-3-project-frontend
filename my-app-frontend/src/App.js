@@ -9,6 +9,7 @@ import Login from "./Components/Login"
 import { BrowserRouter as Router, Switch, Route, Link, Routes } from "react-router-dom"
 import AuthProvider from './Components/AuthProvider';
 import RequireAuth from './Components/RequireAuth';
+import Signup from './Components/Signup';
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
             }/>
           <Route path='/about' element={<About />} />
           <Route path='/login' element={<Login />} />
+          <Route path="/signup" element={<Signup/>} />
         </Routes>
       </Router>
     </AuthProvider>

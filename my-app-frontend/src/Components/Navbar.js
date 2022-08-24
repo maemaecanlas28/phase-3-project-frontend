@@ -1,8 +1,19 @@
-import React from "react"
-import { Link } from "react-router-dom"
+import React, { useContext } from "react"
+import { Link, useNavigate } from "react-router-dom"
 import "./navbar.css"
+import { Button } from "semantic-ui-react"
+import { AuthContext } from "../Context/AuthContext";
 
 const Navbar = () => {
+
+    const navigate = useNavigate();
+    const auth = useContext(AuthContext);
+
+    function handleLogout() {
+        auth.signout()
+        .then(() => navigate("/login"))
+    }
+
     return (
         <>
         <nav className="navbar">
@@ -19,6 +30,9 @@ const Navbar = () => {
                     <Link to="/about">
                         <li>About</li> 
                     </Link>
+                    <Button onClick={handleLogout}>
+                        Logout
+                    </Button>
                 </ul>
             </div>
         </nav>
