@@ -7,7 +7,7 @@ const Navbar = () => {
         <>
         <nav className="navbar">
             <div className="container">
-                <h3 className="logo">Project</h3>
+                <h3 className="logo">World Flatlife Fund</h3>
 
                 <ul className="nav-links">
                     <Link to="/">
