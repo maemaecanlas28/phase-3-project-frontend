@@ -2,14 +2,32 @@ import React, {useState} from "react";
 import { AuthContext } from "../Context/AuthContext";
 
 function AuthProvider ({ children }) {
-    let [user, setUser] = useState(null);
+    let [user, setUser] = useState(localStorage.getItem("user"));
   
     let signin = async (username, password) => {
+
+        const configObj = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                "username": username,
+                "password": password
+            }),
+        }
         // do fetch to call /login in api
-        return fetch("change this", {})
-            .then(() => {
-                setUser(true);
+        return fetch("http://localhost:9292/login", configObj)
+            .then((r) => r.json())
+            .then((data) => {
+                if (!data.error) {
+                    setUser(data);
+                    localStorage.setItem("user", data)
+                }
+                console.log(data)
+                return data
             })
+            .catch((error) => {console.log(error)})
     };
   
     let signout = async () => {
