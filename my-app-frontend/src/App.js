@@ -4,24 +4,30 @@ import Navbar from './Components/Navbar';
 import Home from './Components/Home';
 import About from './Components/About';
 import Animals from './Components/Animals';
-import Donate from './Components/Donate';
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link, Routes} from "react-router-dom"
+import Login from "./Components/Login"
+import { BrowserRouter as Router, Switch, Route, Link, Routes } from "react-router-dom"
+import AuthProvider from './Components/AuthProvider';
+import RequireAuth from './Components/RequireAuth';
 
 function App() {
 
   return (
-    <>
-    <Router>
-      <Navbar />
+    <AuthProvider>
+      <Router>
+        <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/animals' element={<Animals />} />
-          <Route path='/donate' element={<Donate />} />
+          <Route path='/animals' element={
+            <RequireAuth>
+              <Animals />
+            </RequireAuth>
+            }/>
           <Route path='/about' element={<About />} />
+          <Route path='/login' element={<Login />} />
         </Routes>
       </Router>
-    </>
+    </AuthProvider>
   )
 
 }
