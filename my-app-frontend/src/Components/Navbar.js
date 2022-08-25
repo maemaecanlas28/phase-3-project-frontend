@@ -17,28 +17,38 @@ function Navbar () {
     }
 
     return (
-        <div> 
-        <Menu.Item
-            name="Home"
-            active={activeItem === "Home"}
-            onClick={() => setActiveItem("Home")}>
-            <Link to="/"> Home </Link>
+        <div className="navbar">
+        <ul>
+        <li>
+            <Menu.Item
+                name="Home"
+                active={activeItem === "Home"}
+                onClick={() => setActiveItem("Home")}>
+                <Link to="/"> Home </Link>
+            </Menu.Item>
+        </li>
+        <li>
+            <Menu.Item
+                name="Animals"
+                active={activeItem === "Animals"}
+                onClick={() => setActiveItem("Animals")}>
+                <Link to="/animals"> Animals </Link>
+            </Menu.Item>
+        </li>
+        <li>
+            <Menu.Item
+                name="About Us"
+                active={activeItem === "About Us"}
+                onClick={() => setActiveItem("About Us")}>
+                <Link to="/about"> About Us </Link>
         </Menu.Item>
-        <Menu.Item
-            name="Animals"
-            active={activeItem === "Animals"}
-            onClick={() => setActiveItem("Animals")}>
-            <Link to="/animals"> Animals </Link>
-        </Menu.Item>
-        <Menu.Item
-            name="About Us"
-            active={activeItem === "About Us"}
-            onClick={() => setActiveItem("About Us")}>
-            <Link to="/about"> About Us </Link>
-      </Menu.Item>
-      <Button onClick={handleLogout}>
-        Logout
-    </Button>
+      </li>
+      <div className="rightAlign">
+                <Button onClick={handleLogout} >
+                    Logout
+                </Button>
+            </div>
+        </ul> 
     </div>
     )
 }
