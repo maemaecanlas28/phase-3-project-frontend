@@ -4,6 +4,7 @@
     border: 2px solid;
     margin: 150px auto;
     padding: 15px;
+    margin-bottom: 500px;
 }
 
 .card-img-container {
@@ -34,4 +35,23 @@
     margin-right: 30px;
     padding-bottom: 300px;
     position: relative;
+  }
+
+  .button-margin {
+    margin: 0 10px;
+    cursor: pointer;
+  }
+
+  .animal-border {
+    border: black solid;
+    margin: 16px;
+  }
+
+  #main-header {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 25rem;
+    border-radius: 30%;
+    margin-top: 50px;
   }

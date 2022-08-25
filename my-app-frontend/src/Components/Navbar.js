@@ -1,9 +1,8 @@
 import React, { useContext, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
-import "./navbar.css"
-import { Button } from "semantic-ui-react"
+import { Button, Menu } from "semantic-ui-react"
 import { AuthContext } from "../Context/AuthContext";
-import { Menu } from 'semantic-ui-react'
+
 
 function Navbar () {
 
@@ -17,7 +16,7 @@ function Navbar () {
     }
 
     return (
-        <div> 
+        <Menu>
         <Menu.Item
             name="Home"
             active={activeItem === "Home"}
@@ -39,7 +38,7 @@ function Navbar () {
       <Button onClick={handleLogout}>
         Logout
     </Button>
-    </div>
+    </Menu>
     )
 }
 
