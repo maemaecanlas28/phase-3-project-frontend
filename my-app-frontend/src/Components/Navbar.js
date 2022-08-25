@@ -1,13 +1,15 @@
-import React, { useContext } from "react"
+import React, { useContext, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import "./navbar.css"
 import { Button } from "semantic-ui-react"
 import { AuthContext } from "../Context/AuthContext";
+import { Menu } from 'semantic-ui-react'
 
-const Navbar = () => {
+function Navbar () {
 
     const navigate = useNavigate();
     const auth = useContext(AuthContext);
+    const [activeItem, setActiveItem] = useState("Home")
 
     function handleLogout() {
         auth.signout()
@@ -15,28 +17,29 @@ const Navbar = () => {
     }
 
     return (
-        <>
-        <nav className="navbar">
-            <div className="container">
-                <h3 className="logo">World Flatlife Fund</h3>
-
-                <ul className="nav-links">
-                    <Link to="/">
-                        <li>Home</li> 
-                    </Link>
-                    <Link to="/animals"> 
-                        <li>Animals</li> 
-                    </Link>
-                    <Link to="/about">
-                        <li>About</li> 
-                    </Link>
-                    <Button onClick={handleLogout}>
-                        Logout
-                    </Button>
-                </ul>
-            </div>
-        </nav>
-        </>
+        <div> 
+        <Menu.Item
+            name="Home"
+            active={activeItem === "Home"}
+            onClick={() => setActiveItem("Home")}>
+            <Link to="/"> Home </Link>
+        </Menu.Item>
+        <Menu.Item
+            name="Animals"
+            active={activeItem === "Animals"}
+            onClick={() => setActiveItem("Animals")}>
+            <Link to="/animals"> Animals </Link>
+        </Menu.Item>
+        <Menu.Item
+            name="About Us"
+            active={activeItem === "About Us"}
+            onClick={() => setActiveItem("About Us")}>
+            <Link to="/about"> About Us </Link>
+      </Menu.Item>
+      <Button onClick={handleLogout}>
+        Logout
+    </Button>
+    </div>
     )
 }
 
