@@ -1,12 +1,14 @@
 import React from "react"
+import AboutUS from "../Image/AboutUS.gif"
 
 const About = () => {
     return (
-        <>
-        <section className="hero">
-            <h1>About</h1>
-        </section>
-        </>
+        <div>
+        <img 
+            src={AboutUS}
+            alt="AboutUS"
+            className="home-banner" />
+    </div>
     )
 }
 
