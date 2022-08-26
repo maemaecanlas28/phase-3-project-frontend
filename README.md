@@ -1,5 +1,19 @@
 # phase-3-project-frontend
 
+# World Flatlife Fund => A web application for an animal charity organization that allows users to donato to, comnment on, like, and adopt animals of different species. In order for users to have access to the web app, they must be logged in first. Doing so will allow their activities persist and store in the database.  
+
+# The developer working on this also implemented a login/signup system so only authroized users can do the functional features of the website (and have access to the page containing these features). 
+
+# References: 
+# Please refer to Tyler McGinnis' blog for more info on how to create a step-by-step login feature => https://ui.dev/react-router-protected-routes-authentication
+# Please refer to Stackblitz's GitHub for a sample code of a simple login feature => https://stackblitz.com/github/remix-run/react-router/tree/main/examples/auth?file=src%2FApp.tsx
+
+# This project wouldn't be possible for the work they've done and shared to the web community. 
+
+# Donate. Adopt. Love. Enjoy! - Mae C. 
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
