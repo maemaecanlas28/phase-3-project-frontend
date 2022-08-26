@@ -10,36 +10,31 @@ import AuthProvider from './Components/AuthProvider';
 import RequireAuth from './Components/RequireAuth';
 import Signup from './Components/Signup';
 import AnimalDetails from "./Components/AnimalDetails"
-import { useState, useEffect } from "react"
+import Header from './Components/Header';
 
 function App() {
 
-  const [animals, setAnimals] = useState([])
-
-  useEffect(() => {
-      fetch("http://localhost:9292/animals")
-        .then(data => data.json())
-        .then(data => setAnimals(data))
-    }, [])
-
   return (
-    <AuthProvider>
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route exact path='/' element={<Home />} />
-          <Route exact path='/animals' element={
-            <RequireAuth>
-              <Animals animals={animals} setAnimals={setAnimals}/>
-            </RequireAuth>
-            }/>
-          <Route exact path="/animals/:id" element={<AnimalDetails animals={animals}/>} />
-          <Route exact path='/about' element={<About />} />
-          <Route exact path='/login' element={<Login />} />
-          <Route exact path="/signup" element={<Signup/>} />
-        </Routes>
-      </Router>
-    </AuthProvider>
+    <>
+      <Header />
+      <AuthProvider>
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route exact path='/' element={<Home />} />
+            <Route path='/animals' element={
+              <RequireAuth>
+                <Animals />
+              </RequireAuth>
+            } />
+            <Route path="/animals/:id" element={<AnimalDetails />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/login' element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+          </Routes>
+        </Router>
+      </AuthProvider>
+    </>
   )
 
 }

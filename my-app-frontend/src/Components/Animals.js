@@ -1,13 +1,29 @@
+import React, { useEffect, useState } from "react";
 import OneAnimal from "./OneAnimal"
 import { Card } from "semantic-ui-react";
 
 
-function Animals ({ animals, setAnimals }) {
+function Animals () {
+
+    const [animals, setAnimals] = useState([])
+
+  useEffect(() => {
+      fetch("http://localhost:9292/animals")
+        .then(data => data.json())
+        .then(data => setAnimals(data))
+    }, [])
+
+    function increaseAnimalLikes (animal) {
+       const newAnimalList = [...animals]
+        const oneAnimal = newAnimalList.find(item => item.id === animal.id)
+        oneAnimal.likes = oneAnimal.likes + 1
+        setAnimals(newAnimalList)
+    }
 
       const animalCards = animals
         .map(animal => {
             return (
-                <OneAnimal key={animal.id} animal={animal} />
+                <OneAnimal key={animal.id} animal={animal} increaseAnimalLikes={increaseAnimalLikes}/>
             )
         })
 

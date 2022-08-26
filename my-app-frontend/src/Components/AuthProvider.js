@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import { AuthContext } from "../Context/AuthContext";
 
 function AuthProvider ({ children }) {
-    let [user, setUser] = useState(localStorage.getItem("user"));
+    let [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
   
     let signin = async (username, password) => {
 
@@ -22,7 +22,7 @@ function AuthProvider ({ children }) {
             .then((data) => {
                 if (!data.error) {
                     setUser(data);
-                    localStorage.setItem("user", data)
+                    localStorage.setItem("user", JSON.stringify(data))
                 }
                 console.log(data)
                 return data
