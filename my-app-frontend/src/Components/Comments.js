@@ -75,7 +75,7 @@ function Comments({ animal }) {
                             <div>
                                 <span> <b>{message.username}</b> </span>
                                 <span> ({message.location}) says: </span>
-                                <span onClick={() => removeComment(message)}> {message.message} </span>
+                                <span className="pointer" onClick={() => removeComment(message)}> {message.message} </span>
                             </div>
                         </li>
                     )
@@ -83,7 +83,7 @@ function Comments({ animal }) {
             </ul>
             <div>
                 <label><b>Add Your Comment!</b></label>
-                <Form onSubmit={addComment}>
+                <Form onSubmit={userComment.length > 0 ? addComment : null}>
                     <TextArea
                         type="text"
                         name="comments"
