@@ -2,18 +2,6 @@
 
 # World Flatlife Fund => A web application for an animal charity organization that allows users to donato to, comnment on, like, and adopt animals of different species. In order for users to have access to the web app, they must be logged in first. Doing so will allow their activities persist and store in the database.  
 
-# The developer working on this also implemented a login/signup system so only authroized users can do the functional features of the website (and have access to the page containing these features). 
-
-# References: 
-# Please refer to Tyler McGinnis' blog for more info on how to create a step-by-step login feature => https://ui.dev/react-router-protected-routes-authentication
-# Please refer to Stackblitz's GitHub for a sample code of a simple login feature => https://stackblitz.com/github/remix-run/react-router/tree/main/examples/auth?file=src%2FApp.tsx
-
-# This project wouldn't be possible for the work they've done and shared to the web community. 
-
-# Donate. Adopt. Love. Enjoy! - Mae C. 
-
-
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -43,44 +31,15 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-### `npm run eject`
+# The developer working on this also implemented a login/signup system so only authroized users can do the functional features of the website (and have access to the page containing these features). 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# References: 
+# Please refer to Tyler McGinnis' blog for more info on how to create a step-by-step login feature => https://ui.dev/react-router-protected-routes-authentication
+# Please refer to Stackblitz's GitHub for a sample code of a simple login feature => https://stackblitz.com/github/remix-run/react-router/tree/main/examples/auth?file=src%2FApp.tsx
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# This project wouldn't be possible for the work they've done and shared to the web community. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Donate. Adopt. Love. Enjoy! - Mae C. 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
