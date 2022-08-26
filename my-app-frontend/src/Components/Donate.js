@@ -36,6 +36,7 @@ const Donate = ({ animal, setAnimal }) => {
     return (
         <>
             <Input 
+                className="button-donate-margin"
                 type="text"
                 name="name"
                 value={amount}
