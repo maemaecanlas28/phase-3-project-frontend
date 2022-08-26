@@ -8,7 +8,6 @@ function Header () {
             src={WFFBanner}
             alt="WFF Banner" 
             id="main-header" />
-        {/* <button onClick={() => toggleIsDarkMode(!isDarkMode)}></button> */}
     </div>
     )
 }

@@ -42,7 +42,6 @@
   }
 
   .animal-border {
-    border: black solid;
     margin: 16px;
   }
 
@@ -53,4 +52,22 @@
     height: 25rem;
     border-radius: 30%;
     margin-top: 50px;
+  }
+
+  .home-banner {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30%;
+    margin-top: 30px;
+    padding-bottom: 50px;
+  }
+
+  .logo-bottom-right {
+    position: absolute;
+    bottom: 64px;
+    right: 218px;
+    font-size: 18px;
+    width: 222px;
+    height: 215px;
   }

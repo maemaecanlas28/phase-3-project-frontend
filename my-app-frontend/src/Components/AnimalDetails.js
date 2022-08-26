@@ -3,57 +3,71 @@ import Comments from "./Comments";
 import { useParams } from "react-router-dom"
 import { Item } from 'semantic-ui-react'
 import Adopt from "./Adopt"
+import Donate from "./Donate"
+import Raccoon from "../Image/Raccoon.gif"
 
-function AnimalDetails () {
+function AnimalDetails() {
 
     const params = useParams();
     const animalId = parseInt(params.id)
     const [animal, setAnimal] = useState(null)
-    
+
     useEffect(() => {
         fetch(`http://localhost:9292/animals/${animalId}`)
-          .then(data => data.json())
-          .then(data => setAnimal(data))
-      }, [])
+            .then(data => data.json())
+            .then(data => setAnimal(data))
+    }, [])
 
-      const animalAdopt = animal && animal["adopted?"]
-      
+    const animalAdopt = animal && animal["adopted?"]
+
     return (
-    <>
-    {animal != null ? (
-        <div className="animal-body">
-                        <Item.Group>
-                            <Item >
-                                <div className="animal-border">
-                                <Item.Image 
-                                    size='large' 
+        <>
+            {animal != null ? (
+                <div className="animal-body">
+                    <Item.Group>
+                        <Item >
+                            <div className="animal-border">
+                                <Item.Image
+                                    size='large'
                                     src={animal.image_url} />
+                            </div>
+                            <Item.Content>
+                                <h2><strong>{animal.name}</strong></h2>
+                                <div className="text-margin">
+                                    <span>Species: <b>{animal.species}</b></span>
                                 </div>
-                                <Item.Content>
-                                    <h2><strong>{animal.name}</strong></h2>
-                                    <div className="text-margin">
-                                        <span>Species: <b>{animal.species}</b></span>
-                                    </div>
-                                    <div className="text-margin">
-                                        <span>Description: {animal.description}</span>
-                                    </div>
-                                    <div className="text-margin">
-                                        <span>Adopted? <b>{animalAdopt === true ? "Adopted 🐾" : "Not Adopted"}</b></span>
-                                    </div>
-                                    <div className="text-margin">
-                                        <span>Owner: <b>{animalAdopt === true ? animal.owner : "** Waiting for an owner 🥰 **"}</b></span>
-                                    </div>
-                                    <div className="text-margin">
-                                        {animalAdopt === false ? <Adopt animal={ animal } setAnimal={setAnimal} /> : null}
-                                    </div>
-                                    <div className="text-margin">
-                                        <Comments animal={animal} />
-                                    </div>
-                                </Item.Content>
-                            </Item>
-                        </Item.Group>
-                    </div> ): null}
-                    </>
+                                <div className="text-margin">
+                                    <span>Description: {animal.description}</span>
+                                </div>
+                                <div className="text-margin">
+                                    <span>Adopted? <b>{animalAdopt === true ? "Adopted 🐾" : "Not Adopted"}</b></span>
+                                </div>
+                                <div className="text-margin">
+                                    <span>Owner: <b>{animalAdopt === true ? animal.owner : "** Waiting for an owner 🥰 **"}</b></span>
+                                </div>
+                                <div className="text-margin">
+                                    {animalAdopt === false ? <Adopt animal={animal} setAnimal={setAnimal} /> : null}
+                                </div>
+                                <div className="text-margin">
+                                    Donations: <b>${animal.donations}</b>
+                                </div>
+                                <div className="text-margin">
+                                    <Donate animal={animal} setAnimal={setAnimal} />
+                                </div>
+                                <div className="text-margin">
+                                    <Comments animal={animal} />
+                                </div>
+                            </Item.Content>
+                        </Item>
+                    </Item.Group>
+                    <div className="logo-bottom-right">
+                        <img
+                            className="logo-size"
+                            src={Raccoon}
+                            alt="Raccoon" />
+                    </div>
+                </div>) : null}
+        </>
     )
 }
 

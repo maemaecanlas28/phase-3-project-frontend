@@ -1,4 +1,4 @@
-import React, {useContext, useState, useEffect} from "react";
+import React, {useContext} from "react";
 import { Button, Icon, Label } from 'semantic-ui-react'
 import { AuthContext } from "../Context/AuthContext";
 

@@ -6,8 +6,6 @@ import { AuthContext } from "../Context/AuthContext";
 function Adopt ({ animal, setAnimal }) {
 
     const animalAdopt = animal["adopted?"]
-
-    console.log("Hello World!",animalAdopt)
     const auth = useContext(AuthContext);
     const params = useParams();
     const animalId = parseInt(params.id);

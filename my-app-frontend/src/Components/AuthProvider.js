@@ -24,7 +24,6 @@ function AuthProvider ({ children }) {
                     setUser(data);
                     localStorage.setItem("user", JSON.stringify(data))
                 }
-                console.log(data)
                 return data
             })
             .catch((error) => {console.log(error)})

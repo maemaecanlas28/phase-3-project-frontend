@@ -1,12 +1,14 @@
 import React from "react"
+import WFFHome from "../Image/WFFHome.gif"
 
 const Home = () => {
     return (
-        <>
-        <section className="hero">
-            <h1>Home</h1>
-        </section>
-        </>
+        <div>
+        <img 
+            src={WFFHome}
+            alt="WFF PHOTO"
+            className="home-banner" />
+    </div>
     )
 }
 

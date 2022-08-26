@@ -60,8 +60,8 @@ function Login() {
                         header='Action Forbidden'
                         content={error}/>
                 ): null}
-                <Button onClick={handleSignup}>Sign-up</Button>
                 <Button type='submit'>Submit</Button>
+                <Button onClick={handleSignup}>Sign-up</Button>
             </Form>
         </div>
     )
