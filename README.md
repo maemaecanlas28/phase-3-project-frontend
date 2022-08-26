@@ -1,5 +1,3 @@
-# phase-3-project-frontend
-
 # World Flatlife Fund => A web application for an animal charity organization that allows users to donato to, comnment on, like, and adopt animals of different species. In order for users to have access to the web app, they must be logged in first. Doing so will allow their activities persist and store in the database.  
 
 # Getting Started with Create React App
